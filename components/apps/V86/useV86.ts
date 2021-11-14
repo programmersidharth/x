@@ -33,11 +33,11 @@ const useV86 = (
     useFileSystem();
   const saveStateAsync = useCallback(
     (diskImageUrl: string): Promise<ArrayBuffer> =>
-      new Promise((resolve, reject) =>
+      new Promise((resolve, reject) => {
         emulator[diskImageUrl]?.save_state((error, state) =>
           error ? reject(error) : resolve(state)
-        )
-      ),
+        );
+      }),
     [emulator]
   );
   const closeDiskImage = useCallback(
