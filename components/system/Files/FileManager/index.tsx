@@ -24,6 +24,7 @@ type FileManagerProps = {
   showStatusBar?: boolean;
   id?: string;
   url: string;
+  useNewFolderIcon?: boolean;
   view: FileManagerViewNames;
 };
 
@@ -36,6 +37,7 @@ const FileManager = ({
   readOnly,
   showStatusBar,
   url,
+  useNewFolderIcon,
   view,
 }: FileManagerProps): JSX.Element => {
   const [currentUrl, setCurrentUrl] = useState(url);
@@ -109,6 +111,7 @@ const FileManager = ({
                 selectionRect={selectionRect}
                 setRenaming={setRenaming}
                 stats={files[file]}
+                useNewFolderIcon={useNewFolderIcon}
                 view={view}
               />
             </StyledFileEntry>
