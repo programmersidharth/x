@@ -210,6 +210,7 @@ const useFolder = (
       directory,
       exists,
       files,
+      hideFolders,
       readdir,
       setSortOrders,
       stat,
