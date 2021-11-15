@@ -5,7 +5,6 @@ import extensions from "components/system/Files/FileEntry/extensions";
 import type { FileInfo } from "components/system/Files/FileEntry/useFileInfo";
 import {
   FOLDER_ICON,
-  NEW_FOLDER_ICON,
   UNKNOWN_ICON,
 } from "components/system/Files/FileManager/useFolder";
 import processDirectory from "contexts/process/directory";
@@ -139,14 +138,13 @@ export const getInfoWithoutExtension = (
   fs: FSModule,
   path: string,
   isDirectory: boolean,
-  useNewFolderIcon: boolean,
   callback: (value: FileInfo) => void
 ): void => {
   if (isDirectory) {
     const setFolderInfo = (icon: string, getIcon?: () => void): void =>
       callback({ getIcon, icon, pid: "FileExplorer", url: path });
 
-    setFolderInfo(useNewFolderIcon ? NEW_FOLDER_ICON : FOLDER_ICON, () =>
+    setFolderInfo(FOLDER_ICON, () =>
       getIconFromIni(fs, path).then(setFolderInfo)
     );
   } else {

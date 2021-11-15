@@ -53,7 +53,6 @@ type FileEntryProps = {
   selectionRect?: SelectionRect;
   setRenaming: React.Dispatch<React.SetStateAction<string>>;
   stats: FileStat;
-  useNewFolderIcon?: boolean;
   view: FileManagerViewNames;
 };
 
@@ -95,15 +94,13 @@ const FileEntry = ({
   selectionRect,
   setRenaming,
   stats,
-  useNewFolderIcon,
   view,
 }: FileEntryProps): JSX.Element => {
   const { blurEntry, focusEntry } = focusFunctions;
   const { url: changeUrl } = useProcesses();
   const { comment, getIcon, icon, pid, subIcons, url } = useFileInfo(
     path,
-    stats.isDirectory(),
-    useNewFolderIcon
+    stats.isDirectory()
   );
   const openFile = useFile(url);
   const { createPath, pasteList, updateFolder } = useFileSystem();

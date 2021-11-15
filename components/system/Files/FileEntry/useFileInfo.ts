@@ -17,11 +17,7 @@ export type FileInfo = {
   url: string;
 };
 
-const useFileInfo = (
-  path: string,
-  isDirectory: boolean,
-  useNewFolderIcon = false
-): FileInfo => {
+const useFileInfo = (path: string, isDirectory: boolean): FileInfo => {
   const [info, setInfo] = useState<FileInfo>({
     icon: "",
     pid: "",
@@ -34,18 +30,12 @@ const useFileInfo = (
       const extension = extname(path).toLowerCase();
 
       if (!extension || (isDirectory && !MOUNTABLE_EXTENSIONS.has(extension))) {
-        getInfoWithoutExtension(
-          fs,
-          path,
-          isDirectory,
-          useNewFolderIcon,
-          setInfo
-        );
+        getInfoWithoutExtension(fs, path, isDirectory, setInfo);
       } else {
         getInfoWithExtension(fs, path, extension, setInfo);
       }
     }
-  }, [fs, isDirectory, path, useNewFolderIcon]);
+  }, [fs, isDirectory, path]);
 
   return info;
 };

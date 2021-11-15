@@ -68,7 +68,6 @@ type Folder = {
 };
 
 export const FOLDER_ICON = "/System/Icons/folder.png";
-export const NEW_FOLDER_ICON = "/System/Icons/new_folder.png";
 export const UNKNOWN_ICON = "/System/Icons/unknown.png";
 
 const useFolder = (
