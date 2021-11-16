@@ -20,11 +20,13 @@ const useJSDOS = (
   useEffect(() => {
     if (!dosInstance) {
       loadFiles(libs).then(() => {
-        window.emulators.pathPrefix = pathPrefix;
+        if (window.emulators) {
+          window.emulators.pathPrefix = pathPrefix;
 
-        if (containerRef.current) {
-          setDosInstance(window.Dos(containerRef.current, dosOptions));
-          setLoading(false);
+          if (containerRef.current) {
+            setDosInstance(window.Dos(containerRef.current, dosOptions));
+            setLoading(false);
+          }
         }
       });
     }

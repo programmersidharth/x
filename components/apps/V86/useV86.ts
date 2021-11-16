@@ -115,7 +115,10 @@ const useV86 = (
   useV86ScreenSize(id, containerRef, emulator[url]);
 
   useEffect(() => {
-    if (loading) loadFiles(libs).then(() => setLoading(false));
+    if (loading)
+      loadFiles(libs).then(() => {
+        if (window.V86Starter) setLoading(false);
+      });
   }, [loading, setLoading]);
 
   useEffect(() => {
