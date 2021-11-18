@@ -6,42 +6,42 @@ import Button from "styles/common/Button";
 
 const StyledDialog = styled.div`
   h1 {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding-left: 22px;
     background: linear-gradient(
       to right,
       rgb(220, 229, 244),
       rgb(155, 192, 227),
       rgb(0, 43, 85)
     );
-    display: flex;
     font-size: 15px;
     font-weight: 400;
-    height: 40px;
-    padding-left: 22px;
     place-items: center;
-    width: 100%;
   }
 
   nav {
-    background-color: rgb(240, 240, 240);
-    border-top: 1px solid rgb(223, 223, 223);
-    bottom: 0;
-    box-sizing: content-box;
-    display: flex;
-    height: 41px;
-    padding-bottom: 1px;
-    place-items: center;
     position: absolute;
+    bottom: 0;
+    display: flex;
     width: 100%;
+    height: 41px;
+    box-sizing: content-box;
+    padding-bottom: 1px;
+    border-top: 1px solid rgb(223, 223, 223);
+    background-color: rgb(240, 240, 240);
+    place-items: center;
 
     ${Button} {
-      background-color: rgb(225, 225, 225);
-      border: 1px solid rgb(173, 173, 173);
-      font-size: 12px;
-      height: 23px;
-      padding-bottom: 1px;
       position: absolute;
       right: 23px;
       width: 73px;
+      height: 23px;
+      padding-bottom: 1px;
+      border: 1px solid rgb(173, 173, 173);
+      background-color: rgb(225, 225, 225);
+      font-size: 12px;
     }
   }
 `;
