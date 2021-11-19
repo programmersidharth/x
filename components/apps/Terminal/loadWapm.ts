@@ -44,7 +44,7 @@ const loadWapm = async (
       const output = await wasmFs.getStdOut();
 
       if (typeof output === "string") {
-        terminal?.writeln(
+        terminal?.write(
           output.replace(/[\n\r]+/g, "\n").replace(/\n/g, "\r\n")
         );
       }
