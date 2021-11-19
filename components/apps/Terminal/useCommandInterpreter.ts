@@ -1,6 +1,7 @@
 import { BACKSPACE } from "components/apps/Terminal/config";
 import loadWapm from "components/apps/Terminal/loadWapm";
 import processGit from "components/apps/Terminal/processGit";
+import { runPython } from "components/apps/Terminal/python";
 import type { CommandInterpreter } from "components/apps/Terminal/types";
 import { useFileSystem } from "contexts/fileSystem";
 import { useProcesses } from "contexts/process";
@@ -170,6 +171,11 @@ const useCommandInterpreter = (
       case "license":
         terminal?.writeln(`\r\n\r\n${displayLicense}`);
         break;
+      case "py":
+      case "python": {
+        if (terminal) await runPython(commandArgs.join(" "), terminal);
+        break;
+      }
       case "ps":
       case "tasklist":
         newLine();
