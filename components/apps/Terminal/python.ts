@@ -16,6 +16,11 @@ const config = {
   indexURL: "/Program Files/Pyodide/",
 };
 
+const versionCommand = `
+  import sys
+  sys.version
+`;
+
 export const runPython = async (
   code: string,
   terminal: Terminal
@@ -27,7 +32,10 @@ export const runPython = async (
   }
 
   if (window.pyodide) {
-    const result = await window.pyodide.runPythonAsync(code);
+    const getVersion = code === "ver" || code === "version";
+    const result = await window.pyodide.runPythonAsync(
+      getVersion ? versionCommand : code
+    );
 
     if (typeof result !== "undefined") {
       terminal?.write(`\r\n${result.toString()}`);
