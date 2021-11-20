@@ -38,7 +38,12 @@ export const runPython = async (
     );
 
     if (typeof result !== "undefined") {
-      terminal?.write(`\r\n${result.toString()}`);
+      terminal?.write(
+        `\r\n${result
+          .toString()
+          .replace(/[\n\r]+/g, "\n")
+          .replace(/\n/g, "\r\n")}`
+      );
     }
   }
 
