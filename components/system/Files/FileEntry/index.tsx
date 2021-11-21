@@ -269,6 +269,9 @@ const FileEntry = ({
       >
         <figure
           ref={figureRef}
+          style={{
+            pointerEvents: renaming ? "all" : "none",
+          }}
           {...(listView && spotlightEffect(figureRef.current))}
         >
           {[icon, ...(filteredSubIcons || [])].map((entryIcon) => (
