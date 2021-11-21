@@ -80,7 +80,7 @@ const truncateName = (
   return nonBreakingName;
 };
 
-const focusing: string[] = [];
+let focusing: string[] = [];
 
 const FileEntry = ({
   fileActions,
@@ -184,6 +184,7 @@ const FileEntry = ({
         focusedEntries.length === 1 &&
         !buttonRef.current.contains(document.activeElement)
       ) {
+        focusing = [];
         blurEntry();
         focusEntry(fileName);
         buttonRef.current.focus(PREVENT_SCROLL);
@@ -247,6 +248,7 @@ const FileEntry = ({
             !MOUNTABLE_EXTENSIONS.has(urlExt)
           ) {
             changeUrl(fileManagerId, url);
+            focusing = [];
             blurEntry();
           } else if (openInFileExplorer && listView) {
             setShowInFileManager((currentState) => !currentState);
