@@ -1535,10 +1535,10 @@ babel-plugin-jest-hoist@^27.2.0:
     "@types/babel__core" "^7.0.0"
     "@types/babel__traverse" "^7.0.6"
 
-"babel-plugin-styled-components@>= 1.12.0", babel-plugin-styled-components@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-2.0.0.tgz#9434aae99ea0cf762c4de2346d88be2c5c421bef"
-  integrity sha512-Cpzq6y9laI/Q1tRvNiw6FW2g3SKb0K0dBfuC0Aw1w3qSl7IzHM3iHXhIQyHSFRI7A67NhPXvg9cPg0KlXjCoNQ==
+"babel-plugin-styled-components@>= 1.12.0", babel-plugin-styled-components@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-2.0.1.tgz#4d1ea2169363887ffce5352f32080cba14d243cc"
+  integrity sha512-U3wmORxerYBiqcRCo6thItIosEIga3F+ph0jJPkiOZJjyhpZyUZFQV9XvrZ2CbBIihJ3rDBC/itQ+Wx3VHMauw==
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.16.0"
     "@babel/helper-module-imports" "^7.16.0"
@@ -5631,14 +5631,14 @@ react-dom@^17.0.1:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-dom@^18.0.0-beta-149b420f6-20211119:
-  version "18.0.0-beta-149b420f6-20211119"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-beta-149b420f6-20211119.tgz#dcf05faf52c6206db642dd50ae13a6647ee39fac"
-  integrity sha512-r8olPiJVDGRLHjF+LMzLBPUWSbG6OXuNInaC/kcJkDwBW8rX2gkOypGvylP5i3VqtpiPX6CHyD599aypa3wpPA==
+react-dom@^18.0.0-beta-fdc1d617a-20211118:
+  version "18.0.0-beta-fdc1d617a-20211118"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-beta-fdc1d617a-20211118.tgz#0d2ddaa962fae1bbcf17c0eac5e3879d30793753"
+  integrity sha512-BlA0NdAKE+Ibe5orAfHphf76ltL9+PiWsexrjVjtRcumrra3WH3rDYT+evXfLFBzxpbZDjhkL1oQ1/zCjKyWBA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    scheduler "0.21.0-beta-149b420f6-20211119"
+    scheduler "0.21.0-beta-fdc1d617a-20211118"
 
 react-draggable@4.4.3:
   version "4.4.3"
@@ -5692,10 +5692,10 @@ react@^17.0.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-react@^18.0.0-beta-149b420f6-20211119:
-  version "18.0.0-beta-149b420f6-20211119"
-  resolved "https://registry.yarnpkg.com/react/-/react-18.0.0-beta-149b420f6-20211119.tgz#4acc03dddb74a93aec83a8d6aadeb6b503061f4b"
-  integrity sha512-cxLRM4Yqhe5fYAeYyMEGphtDnSJmKrvrsQyXskcVViGN/EmONHbFfwt1lRUCiZyXX44+/NOgIJ1OjGX2rHmpdQ==
+react@^18.0.0-beta-fdc1d617a-20211118:
+  version "18.0.0-beta-fdc1d617a-20211118"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.0.0-beta-fdc1d617a-20211118.tgz#ed8dd1674ddcab02bfff88ba368ad4d44db79fa7"
+  integrity sha512-+02tXs7Wc5az4Aw+dWp7Vwmd68POpiJF0pD20dVCwS+W8xxQ9GFEJrd5VE4Nal+HWDkGzSb6dApxoahULK/8ZA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -5946,10 +5946,10 @@ saxes@^5.0.1:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@0.21.0-beta-149b420f6-20211119:
-  version "0.21.0-beta-149b420f6-20211119"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-beta-149b420f6-20211119.tgz#066b24dc2df762a6197c725930dcc7013de40ad2"
-  integrity sha512-IShAO9AhLkyiHY5wujThaUypxGHJj8IBdTTlerl040NzV/edrGeFTeTEpn4EjEhQzV0hVW9Oo58Fps3p5wtnww==
+scheduler@0.21.0-beta-fdc1d617a-20211118:
+  version "0.21.0-beta-fdc1d617a-20211118"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-beta-fdc1d617a-20211118.tgz#1f5e075e81b48af4a50d8f602a7a636731f0b8d4"
+  integrity sha512-fagjljhO7tVIGdT3rtYjjbHve/XfMubdY3Yna799WMK/rfYZtsGvX3GPu3IsjwOIs3IrcGjlxVRm6u3PFO+lwA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
